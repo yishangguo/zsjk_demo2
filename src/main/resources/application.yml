@@ -4,3 +4,8 @@ spring:
      username: root
      password: pppp
      driver-class-name: com.mysql.jdbc.Driver
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb
+

@@ -23,23 +23,23 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="15" parent="11" name="goods_name">
+    <column id="15" parent="11" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="16" parent="11" name="goods_num">
+    <column id="16" parent="11" name="num">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="17" parent="11" name="goods_price">
+    <column id="17" parent="11" name="price">
       <Position>4</Position>
       <DataType>decimal(10)|0</DataType>
     </column>
-    <column id="18" parent="11" name="goods_description">
+    <column id="18" parent="11" name="description">
       <Position>5</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="19" parent="11" name="goods_image">
+    <column id="19" parent="11" name="image">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
@@ -109,7 +109,11 @@
       <Position>4</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <key id="35" parent="13" name="PRIMARY">
+    <column id="35" parent="13" name="type">
+      <Position>5</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <key id="36" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

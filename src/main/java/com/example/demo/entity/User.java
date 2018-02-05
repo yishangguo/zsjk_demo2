@@ -5,6 +5,7 @@ public class User {
     private String username;
     private String password;
     private String phone;
+    private String type;
 
     public User() {
     }
@@ -16,14 +17,16 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 
-    public User(Integer id, String username, String password, String phone) {
+    public User(Integer id, String username, String password, String phone, String type) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.phone = phone;
+        this.type = type;
     }
 
     public Integer getId() {
@@ -34,11 +37,11 @@ public class User {
         this.id = id;
     }
 
-    public String getusername() {
+    public String getUsername() {
         return username;
     }
 
-    public void setusername(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -56,5 +59,13 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
