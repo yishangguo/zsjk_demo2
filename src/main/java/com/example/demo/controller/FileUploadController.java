@@ -2,14 +2,12 @@ package com.example.demo.controller;
 
 
 import ch.qos.logback.core.util.FileUtil;
+import com.example.demo.entity.Result;
 import com.example.demo.util.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,26 +19,42 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
+/**
+ *
+ *文件上传操作
+ *创建文件/保存文件的时候使用绝对路径，写入数据库的时候用相对路径
+ *
+ * */
+
 @MultipartConfig
 @Controller
 public class FileUploadController {
 
-    @RequestMapping("/upload")
+    @RequestMapping(value = "/upload",method = RequestMethod.POST)
     @ResponseBody
-    public String upload(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException, ServletException {
+    public boolean upload(@RequestParam("file") MultipartFile file) throws IOException, ServletException {
+        //获取文件类型（可以判断如果不是图片，禁止上传）
         String contentType = file.getContentType();
         String fileName = file.getOriginalFilename();
-        System.out.println("fileName-->" + fileName);
-        System.out.println("getContentType-->" + contentType);
-        String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
-        System.out.println("filePath-->"+filePath);
+        System.out.println("上传的文件名：" + fileName);
+        System.out.println("文件类型：" + contentType);
+        //获取文件后缀名
+        String suffixName = fileName.substring(fileName.lastIndexOf("."));
+        System.out.println("上传的后缀名为："+suffixName);
+
+//        String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
+//        System.out.println("filePath-->"+filePath);
+        String filePath = "E:\\ZSJK\\demo2\\src\\main\\resources\\static\\upload\\";
         try {
             uploadFile(file.getBytes(), filePath, fileName);
         } catch (Exception e) {
             // TODO: handle exception
+            return false;
         }
-        //返回json
-        return "upload success";
+        Result result = new Result();
+        result.setFlag(3);
+        return true;
 //        Part part = request.getPart("file");
 //        if (part == null){
 //            System.out.println("part = null");

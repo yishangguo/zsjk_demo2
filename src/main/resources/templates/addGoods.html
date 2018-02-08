@@ -254,18 +254,27 @@
                     </header>
 
                 </section>
+
                 <div class="form-group-col-2">
                     <div class="form-label">商品名称：</div>
                     <div class="form-cont">
-                        <input type="text" placeholder="请输入商品名称..." class="form-control form-boxed" />
+                        <input type="text" placeholder="请输入商品名称..." class="form-control form-boxed" id="name"/>
+                    </div>
+                </div>
+                <div class="form-group-col-2">
+                    <div class="form-label">商品数量：</div>
+                    <div class="form-cont">
+                        <input type="text" placeholder="请输入商品数量..." class="form-control form-boxed" id="num"/>
                     </div>
                 </div>
                 <div class="form-group-col-2">
                     <div class="form-label">上传图片：</div>
                     <div class="form-cont">
-                        <form action="upload" method="post" enctype="multipart/form-data">
-                            <input type="file" name="file" class="form-control form-boxed" style="width:300px;" />
-                            <button class="btn btn-primary" id="upload" type="submit">上传</button>
+                        <!--<form action="upload" name="uploadForm" method="post" enctype="multipart/form-data">-->
+                        <form id="uploadForm">
+                            <input type="file" name="file" class="form-control form-boxed" style="width:300px;" id="image"/>
+                            <button class="btn btn-primary" type="button" id="upload">上传</button>
+                            <!--<iframe name="uploadFrame" id="uploadFrame" style="display: block"></iframe>-->
                         </form>
 
                         <!--<span class="word-aux"><i class="icon-warning-sign"></i>请上传图片</span>-->
@@ -274,7 +283,7 @@
                 <div class="form-group-col-2">
                     <div class="form-label">价格：</div>
                     <div class="form-cont">
-                        <input type="email" placeholder="请输入价格..." class="form-control form-boxed" />
+                        <input type="email" placeholder="请输入价格..." class="form-control form-boxed" id="price"/>
                     </div>
                 </div>
                 <div class="form-group-col-2">
@@ -358,14 +367,18 @@
                 <div class="form-group-col-2">
                     <div class="form-label">商品描述：</div>
                     <div class="form-cont">
-                        <textarea class="form-control form-boxed">摘要信息</textarea>
+                        <textarea class="form-control form-boxed" id="description">摘要信息</textarea>
                     </div>
                 </div>
                 <div class="form-group-col-2">
                     <div class="form-label"></div>
                     <div class="form-cont">
-                        <input type="submit" class="btn btn-primary" value="提交商品信息" id="submit"/>
-                        <!--<input type="reset" class="btn btn-disabled" value="禁止" />-->
+
+                            <button type="submit" class="btn btn-primary" value="提交商品信息" id="submit">
+                                提交商品信息
+                            </button>
+
+                            <!--<input type="reset" class="btn btn-disabled" value="禁止" />-->
                     </div>
                 </div>
                 <!--开始::结束-->
@@ -390,14 +403,64 @@
 </div>
 </body>
 <script type="text/javascript">
+//    //上传图片
+//    $("#upload").click(function () {
+//        if ($.browser.msie){
+//            window.uploadForm.submit();
+//        }else {
+//            $("#uploadForm").submit();
+//        }
+//    });
+
+$("#upload").click(function () {
+//    var formData = new FormData();
+//    formData.append("file",$("#image")[0].files[0]);
+    var formData = new FormData($("#uploadForm")[0]);
+    console.log($("#uploadForm")[0])
+    $.ajax({
+        type:"post",
+        url:"upload",
+        data:formData,
+        cache:false,
+        async: false,
+        processData : false,
+        contentType : false,
+        dataType:"text",
+        success : function(data){
+            console.log(data);
+            if (data){
+                //上传成功
+                layer.alert("图片上传成功");
+            }else {
+                //图片上传失败，请重新上传
+                layer.alert("图片上传失败，请重新上传");
+            }
+        }
+    });
+})
+
+
+    //新增商品
     $("#submit").click(function () {
+        var info = {};
+        info.name = $("#name").val();
+        info.num = $("#num").val();
+        info.price = $("#price").val();
+        info.image = $("#image").val();
+        info.description = $("#description").val();
+        console.log(info);
         $.ajax({
             type:"POST",
-            url:"addGoods",
+            url:"add_goods",
             dataType:"json",
-            contentType:"application/x-www-form-urlencoded; charset=utf-8",
+            headers:{"Content-Type":"application/json;charset=utf-8"},
+            data:JSON.stringify(info),
             success:function (data) {
-                alert(data);
+                if(data){
+                    layer.alert("新增商品成功");
+                }else{
+                    layer.alert("新增商品失败");
+                }
             }
         })
     })

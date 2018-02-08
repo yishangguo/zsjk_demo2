@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>商城后台管理</title>
+    <meta name="keywords"  content="设置关键词..." />
+    <meta name="description" content="设置描述..." />
+    <meta name="author" content="DeathGhost" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link rel="icon" href="images/icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/plug-ins/customScrollbar.min.js"></script>
+    <script src="javascript/plug-ins/echarts.min.js"></script>
+    <script src="javascript/plug-ins/layerUi/layer.js"></script>
+    <script src="editor/ueditor.config.js"></script>
+    <script src="editor/ueditor.all.js"></script>
+    <script src="javascript/plug-ins/pagination.js"></script>
+    <script src="javascript/public.js"></script>
+</head>
+<body>
+<div class="main-wrap">
+    <div class="side-nav">
+        <div class="side-logo">
+            <div class="logo">
+				<span class="logo-ico">
+					<i class="i-l-1"></i>
+					<i class="i-l-2"></i>
+					<i class="i-l-3"></i>
+				</span>
+                <strong>商城后台管理</strong>
+            </div>
+        </div>
+
+        <nav class="side-menu content mCustomScrollbar" data-mcs-theme="minimal-dark">
+            <h2>
+                <a href="index.html" class="InitialPage"><i class="icon-dashboard"></i>首页</a>
+            </h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">新增商品</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">查询库存</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-inbox"></i>订单管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="button.html">查询订单</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-table"></i>用户管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="table.html">查询用户</a>
+                        </dd>
+                    </dl>
+                </li>
+                <!--				<li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-list-alt"></i>表单UI<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="form.html">表单结构样式</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-external-link"></i>弹出窗口<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="popups.html">基础弹出层</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-bar-chart"></i>百度统计echarts图表<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="echarts.html">echarts统计图表</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-font"></i>文本编辑器<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="ueditor.html">百度UEDITOR编辑器</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-road"></i>进度条<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="progress.html">progress进度条兼容</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-tags"></i>Tab选项卡<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="tab.html">Tab选项卡</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-filter"></i>下拉菜单<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="button-dropdown.html">按钮式下拉菜单</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-sitemap"></i>页面分组标题<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="title.html">页面标题</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-columns"></i>分页<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="paging.html">jquery分页效果</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-spinner"></i>旋转动画<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="animation.html">刷新加载动画</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-fighter-jet"></i>面包屑导航<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="breadcrumb.html">面包屑</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-laptop"></i>文本面板<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="text-panel.html">文本面板</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-leaf"></i>块引用<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="blockquote.html">块引用</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-star"></i>第三方弹窗组件<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="layer.html">web弹层组件</a>
+                                        </dd>
+                                    </dl>
+                                </li>-->
+            </ul>
+        </nav>
+
+
+        <footer class="side-footer">© DeathGhost 版权所有</footer>
+    </div>
+    <div class="content-wrap">
+        <header class="top-hd">
+            <div class="hd-lt">
+                <a class="icon-reorder"></a>
+            </div>
+            <div class="hd-rt">
+                <ul>
+                    <li>
+                        <a href="#" target="_blank"><i class="icon-home"></i>前台访问</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-random"></i>清除缓存</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+                    </li>
+                    <li>
+                        <a><i class="icon-bell-alt"></i>系统消息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main-cont content mCustomScrollbar">
+            <div class="page-wrap">
+                <!--开始::内容-->
+                <section class="page-hd">
+                    <header>
+                        <h2 class="title">用户管理</h2>
+                        <p class="title-description">
+                            新增、编辑、删除、查询等操作
+                        </p>
+                        <br/>
+                        <button class="btn btn-primary" id="add">新增用户</button>
+                    </header>
+
+                </section>
+
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>用户名</th>
+                        <th>联系方式</th>
+                        <th>用户类型</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--<tr class="cen">
+                        <td>#001</td>
+                        <td class="lt"><a href="#">正宗陕西洛川红富士 新鲜水果特惠</a></td>
+                        <td>50000斤</td>
+                        <td>￥4.00</td>
+
+                        <td>
+                            <a title="编辑" class="mr-5">编辑</a>
+                            <a title="详情" class="mr-5">详情</a>
+                            <a title="删除">删除</a>
+                        </td>
+                    </tr>
+                    <tr class="cen">
+                        <td>#001</td>
+                        <td class="lt"><a href="#">正宗陕西洛川红富士 新鲜水果特惠</a></td>
+                        <td>50000斤</td>
+                        <td>￥4.00</td>
+
+                        <td>
+                            <a title="编辑" class="mr-5">编辑</a>
+                            <a title="详情" class="mr-5">详情</a>
+                            <a title="删除">删除</a>
+                        </td>
+                    </tr>
+                    <tr class="cen">
+                        <td>#001</td>
+                        <td class="lt"><a href="#">正宗陕西洛川红富士 新鲜水果特惠</a></td>
+                        <td>50000斤</td>
+                        <td>￥4.00</td>
+
+                        <td>
+                            <a title="编辑" class="mr-5">编辑</a>
+                            <a title="详情" class="mr-5">详情</a>
+                            <a title="删除">删除</a>
+                        </td>
+                    </tr>-->
+                    </tbody>
+                </table>
+                <!--开始::结束-->
+            </div>
+        </main>
+        <footer class="btm-ft">
+            <p class="clear">
+                <span class="fl">©Copyright 2016 <a href="#" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
+                <span class="fr text-info">
+					<em class="uppercase">
+						<i class="icon-user"></i>
+						author:deathghost
+					</em> |
+					<em class="uppercase"><i class="icon-envelope-alt"></i>
+						更多模板： <a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+					</em>
+					<a onclick="reciprocate()" class="text-primary"><i class="icon-qrcode"></i>捐赠</a>
+				</span>
+            </p>
+        </footer>
+    </div>
+</div>
+</body>
+
+<script type="text/template" id="editUser">
+    <div class="form-group-col-2">
+        <div class="form-label"></div>
+        <div class="form-cont">
+            <input type="text" placeholder="" class="form-control form-boxed" style="display: none;" id="user_id"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户名：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="user_name"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户密码：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="pass_word"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">联系方式：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="user_phone"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户类型：</div>
+        <div class="form-cont">
+            <select style="width:auto;" id="user_type">
+                <option>卖家</option>
+                <option>管理员</option>
+            </select>
+        </div>
+    </div>
+
+
+
+</script>
+
+<script type="text/template" id="addUser">
+    <div class="form-group-col-2">
+        <div class="form-label"></div>
+        <div class="form-cont">
+            <input type="text" placeholder="" class="form-control form-boxed" style="display: none;" id="user_id"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户名：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="username"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户密码：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="password"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">联系方式：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="phone"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">用户类型：</div>
+        <div class="form-cont">
+            <select style="width:auto;" id="type">
+                <option>卖家</option>
+                <option>管理员</option>
+            </select>
+        </div>
+    </div>
+
+
+
+</script>
+
+<script type="text/javascript">
+    var userType = new Array();
+    userType[0] = "管理员";
+    userType[1] = "卖家";
+
+
+        //用户查询 为删除按钮、编辑按钮等绑定事件
+        $.ajax({
+            type:"POST",
+            url:"query_users",
+            dataType:"json",
+            headers:{"Content-Type":"application/json;charset=utf-8"},
+            success:function (datas) {
+                console.log(datas.length);
+                var i = 0;
+                for(i in datas){
+                        console.log(datas[i]);
+                    var tr = document.createElement("tr");
+                        tr.className = "cen";
+                        //用户ID
+                        var tdId = document.createElement("td");
+                        tdId.innerHTML = datas[i].id;
+                        tdId.className = "id";
+                        tdId.style="display:none";
+
+                        //页面显示编号
+                        var tdNum = document.createElement("td");
+                        tdNum.innerHTML = parseInt(i)+parseInt(1)//生成序号(弱类型语言相加操作)
+                        tdNum.className = "num";
+                        var tdUsername = document.createElement("td");
+                        tdUsername.innerHTML = datas[i].username;
+                        tdUsername.className = "username";
+                        var tdPhone = document.createElement("td");
+                        tdPhone.innerHTML = datas[i].phone;
+                        tdPhone.className = "phone";
+                        var tdType = document.createElement("td");
+                        tdType.innerHTML = userType[datas[i].type];
+                    tdType.className = "type";
+                        var td = document.createElement("td");
+                        var add = document.createElement("a");
+                        var edit = document.createElement("a");
+                        var del = document.createElement("a");
+//                        add.className = "add";
+//                        add.title = "新增";
+//                        add.innerHTML = "新增 ";
+                        edit.className = "edit";
+                        edit.title = "编辑";
+                        edit.innerHTML = "编辑 ";
+                        del.className = "del";
+                        del.title = "删除";
+                        del.innerHTML = "删除 ";
+//                        td.appendChild(add);
+                        td.appendChild(edit);
+                        td.appendChild(del);
+
+                        tr.appendChild(tdNum);
+                        tr.appendChild(tdUsername);
+                        tr.appendChild(tdPhone);
+                        tr.appendChild(tdType);
+                        tr.appendChild(td);
+
+                        tr.appendChild(tdId);
+                        document.getElementsByTagName("tbody")[0].appendChild(tr);
+                    }
+                //绑定删除事件
+                $(".del").on("click",function () {
+                    //var username = $(this).parents("tr").find(".username").text();
+                    var info = {};
+                    info.id = $(this).parents("tr").find(".id").text();
+                    layer.confirm("确定删除该用户？",{
+                        btn:["是的","取消"]//按钮
+                    },function () {
+                        $.ajax({
+                            type:"POST",
+                            url:"del_user",
+                            dataType:"json",
+                            headers:{"Content-Type":"application/json;charset=utf-8"},
+                            data:JSON.stringify(info),
+                            success:function (data) {
+                                if (data){
+                                    layer.msg("删除成功",{icon:1});
+                                    //停留1s后刷新用户列表
+                                    setTimeout(function () {
+                                        location.reload();
+                                    },1000);
+                                }
+                            }
+                        })
+                    })
+                })
+                //绑定编辑事件
+                $(".edit").on("click",function () {
+                    var id = $(this).parents("tr").find(".id").text();
+                    var num =  $(this).parents("tr").find(".num").text();
+                    var username = $(this).parents("tr").find(".username").text();
+                    var phone = $(this).parents("tr").find(".phone").text();
+                    var type = $(this).parents("tr").find(".type").text();
+                    var info = {};
+                    console.log(type);
+                    layer.open({
+                        type:1,//很重要
+                        title:"编辑用户信息",
+                        area:["750px","470px"],
+                        content:$("#editUser").html(),
+                        btn:["修改并保存"],
+                        success:function () {
+                            //页面值赋给弹出层
+                            document.getElementById("user_id").value = id;
+                            document.getElementById("user_name").value = username;
+                            document.getElementById("user_phone").value = phone;
+                            document.getElementById("user_type").value = type;
+                        },
+                        yes:function () {
+                            info.id = $("#user_id").val();
+                            info.username = $("#user_name").val();
+                            info.password = $("#pass_word").val();
+                            info.phone = $("#user_phone").val();
+                            //用户类型不进行修改
+                            console.log(info);
+                            $.ajax({
+                                type:"POST",
+                                url:"edit_user",
+                                dataType:"json",
+                                headers:{"Content-Type":"application/json;charset=utf-8"},
+                                data:JSON.stringify(info),
+                                success:function (data) {
+                                    if (data){
+                                        var find = document.getElementsByTagName("tr")[num];
+                                        //更新操作成功的话 把当前列的内容替换成更新后的
+                                        find.cells[1].innerText = $("#user_name").val();
+                                        find.cells[2].innerText = $("#user_phone").val();
+                                        find.cells[3].innerText = $("#user_type").val();
+                                    }else {
+                                        layer.alert("更新失败",function () {
+                                            window.location.reload();
+                                        })
+                                    }
+                                    layer.closeAll();//关闭弹出层
+                                }
+                            })
+                        }
+                    })
+
+
+                })
+            }
+        });
+
+    //新增用户信息
+    $("#add").click(function () {
+        layer.open({
+            type: 1,//很重要
+            title: "新增用户信息",
+            area: ["750px", "470px"],
+            content: $("#addUser").html(),
+            btn: ["添加并保存"],
+            success:function () {},
+            yes:function () {
+                var info = {};
+                info.username = $("#username").val();
+                info.password = $("#password").val();
+                info.phone = $("#phone").val();
+                if($("#type").val() == "管理员"){//弱类型语言对象的比较
+                    info.type = 0;
+                }else {
+                    info.type = 1;
+                }
+
+                $.ajax({
+                    type:"POST",
+                    async:false,
+                    url:"add_user",
+                    dataType:"json",
+                    headers:{"Content-Type":"application/json;charset=utf-8"},
+                    data:JSON.stringify(info),
+                    success:function (result) {
+                        if(result) {
+                            layer.msg("添加用户成功",{icon:1});
+                            //停留1s后刷新用户列表
+                            setTimeout(function () {
+                                location.reload();
+                            },1000);
+                        }else {
+                            layer.alert("添加用户失败");
+                        }
+                    }
+                })
+            }
+        });
+
+    })
+
+</script>
+</html>

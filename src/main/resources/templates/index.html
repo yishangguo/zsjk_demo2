@@ -231,7 +231,7 @@
 						<a><i class="icon-random"></i>清除缓存</a>
 					</li>
 					<li>
-						<a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+						<a><i class="icon-user"></i>当前用户:<em id="username"></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>
@@ -263,4 +263,8 @@
 	</div>
 </div>
 </body>
+<script type="text/javascript">
+	console.log(sessionStorage.getItem("username"));
+	document.getElementById("username").innerHTML = sessionStorage.getItem("username");
+</script>
 </html>

@@ -5,6 +5,7 @@ public class Goods {
     private String name;
     private int num;
     private String price;
+    private String description;
     private String image;
     private String created;
     private String updated;
@@ -19,17 +20,19 @@ public class Goods {
                 ", name='" + name + '\'' +
                 ", num=" + num +
                 ", price='" + price + '\'' +
+                ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 ", created='" + created + '\'' +
                 ", updated='" + updated + '\'' +
                 '}';
     }
 
-    public Goods(int gid, String name, int num, String price, String image, String created, String updated) {
+    public Goods(int gid, String name, int num, String price, String description, String image, String created, String updated) {
         this.gid = gid;
         this.name = name;
         this.num = num;
         this.price = price;
+        this.description = description;
         this.image = image;
         this.created = created;
         this.updated = updated;
@@ -65,6 +68,14 @@ public class Goods {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getImage() {
