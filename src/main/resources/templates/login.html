@@ -89,7 +89,12 @@ $("#entry").click(function () {
             if (data){
                 sessionStorage.setItem("username",data.username);
                 sessionStorage.setItem("id",data.id);
-                window.location = "index.html"
+                sessionStorage.setItem("token",data.token);
+                if(data.type == 0){
+                    window.location = "index.html"
+                }else if(data.type == 1){
+                    window.location = "index_custom.html";
+                }
             }else {
                 layer.alert("用户名或密码错误，请重新登录");
             }

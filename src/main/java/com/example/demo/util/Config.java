@@ -1,20 +1,16 @@
 package com.example.demo.util;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.WebApplicationContext;
 
 import javax.servlet.ServletContext;
 
+
 public class Config{
-    public static String RESOURCE_ROOT;//资源文件路径
-    public static String TMP_FILE_SRC = "file/image/temp/";
-    public static String TMP_FILE_DIR;
-
-
-    public static void init(ServletContext context){
-        RESOURCE_ROOT = context.getInitParameter("resource-root");
-        TMP_FILE_DIR = RESOURCE_ROOT + "image/temp/";
-    }
+    public static String SECRET_KEY; //私钥
 
 }

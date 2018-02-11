@@ -13,6 +13,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 import java.util.Random;
 
+
 /**
  * Created by Administrator on 2018/2/8.
  */
@@ -108,5 +109,11 @@ public class Token {
 
         return data;
     }
+
+    public static Token validToken(String token){
+        Token res = Token.decodeToken(token, Config.SECRET_KEY);
+        return res;
+    }
+
 
 }

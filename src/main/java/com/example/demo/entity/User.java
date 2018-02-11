@@ -6,6 +6,7 @@ public class User {
     private String password;
     private String phone;
     private int type;
+    private String token;
 
     public User() {
     }
@@ -18,15 +19,17 @@ public class User {
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
                 ", type=" + type +
+                ", token='" + token + '\'' +
                 '}';
     }
 
-    public User(Integer id, String username, String password, String phone, int type) {
+    public User(Integer id, String username, String password, String phone, int type, String token) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.phone = phone;
         this.type = type;
+        this.token = token;
     }
 
     public Integer getId() {
@@ -67,5 +70,13 @@ public class User {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

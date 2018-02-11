@@ -231,7 +231,7 @@
                         <a><i class="icon-random"></i>清除缓存</a>
                     </li>
                     <li>
-                        <a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+                        <a><i class="icon-user"></i>管理员:<em id="user"></em></a>
                     </li>
                     <li>
                         <a><i class="icon-bell-alt"></i>系统消息</a>
@@ -407,19 +407,25 @@
 </script>
 
 <script type="text/javascript">
+    console.log(sessionStorage.getItem("username"));
+    document.getElementById("user").innerHTML = sessionStorage.getItem("username");
     var userType = new Array();
     userType[0] = "管理员";
     userType[1] = "卖家";
-
-
+    var info = {};
+    info.token = sessionStorage.getItem("token");
         //用户查询 为删除按钮、编辑按钮等绑定事件
         $.ajax({
             type:"POST",
             url:"query_users",
             dataType:"json",
             headers:{"Content-Type":"application/json;charset=utf-8"},
+            data:JSON.stringify(info),
             success:function (datas) {
                 console.log(datas.length);
+                if (datas == null){
+                    layer.msg("Token验证失败导致查询失败");
+                }
                 var i = 0;
                 for(i in datas){
                         console.log(datas[i]);
@@ -433,7 +439,7 @@
 
                         //页面显示编号
                         var tdNum = document.createElement("td");
-                        tdNum.innerHTML = parseInt(i)+parseInt(1)//生成序号(弱类型语言相加操作)
+                        tdNum.innerHTML = parseInt(i)+parseInt(1)//生成序号(JS语言相加操作)
                         tdNum.className = "num";
                         var tdUsername = document.createElement("td");
                         tdUsername.innerHTML = datas[i].username;
@@ -445,7 +451,7 @@
                         tdType.innerHTML = userType[datas[i].type];
                     tdType.className = "type";
                         var td = document.createElement("td");
-                        var add = document.createElement("a");
+
                         var edit = document.createElement("a");
                         var del = document.createElement("a");
 //                        add.className = "add";
@@ -475,6 +481,7 @@
                     //var username = $(this).parents("tr").find(".username").text();
                     var info = {};
                     info.id = $(this).parents("tr").find(".id").text();
+                    info.token = sessionStorage.getItem("token");
                     layer.confirm("确定删除该用户？",{
                         btn:["是的","取消"]//按钮
                     },function () {
@@ -485,12 +492,16 @@
                             headers:{"Content-Type":"application/json;charset=utf-8"},
                             data:JSON.stringify(info),
                             success:function (data) {
-                                if (data){
+                                if (data == 1){
                                     layer.msg("删除成功",{icon:1});
                                     //停留1s后刷新用户列表
                                     setTimeout(function () {
                                         location.reload();
                                     },1000);
+                                }else if(data == 0){
+                                    layer.msg("删除失败");
+                                }else {
+                                    layer.msg("Token验证失败");
                                 }
                             }
                         })
@@ -523,6 +534,7 @@
                             info.username = $("#user_name").val();
                             info.password = $("#pass_word").val();
                             info.phone = $("#user_phone").val();
+                            info.token = sessionStorage.getItem("token");
                             //用户类型不进行修改
                             console.log(info);
                             $.ajax({
@@ -532,16 +544,21 @@
                                 headers:{"Content-Type":"application/json;charset=utf-8"},
                                 data:JSON.stringify(info),
                                 success:function (data) {
-                                    if (data){
+                                    if (data == 1){
                                         var find = document.getElementsByTagName("tr")[num];
                                         //更新操作成功的话 把当前列的内容替换成更新后的
                                         find.cells[1].innerText = $("#user_name").val();
                                         find.cells[2].innerText = $("#user_phone").val();
                                         find.cells[3].innerText = $("#user_type").val();
-                                    }else {
-                                        layer.alert("更新失败",function () {
+                                        setTimeout(function () {
+                                            layer.msg("编辑成功");
+                                        },1000);
+                                    }else if(data == 0){
+                                        layer.alert("编辑失败",function () {
                                             window.location.reload();
                                         })
+                                    }else{
+                                        layer.alert("Token验证失败");
                                     }
                                     layer.closeAll();//关闭弹出层
                                 }
@@ -568,6 +585,7 @@
                 info.username = $("#username").val();
                 info.password = $("#password").val();
                 info.phone = $("#phone").val();
+                info.token = sessionStorage.getItem("token");
                 if($("#type").val() == "管理员"){//弱类型语言对象的比较
                     info.type = 0;
                 }else {
@@ -582,14 +600,16 @@
                     headers:{"Content-Type":"application/json;charset=utf-8"},
                     data:JSON.stringify(info),
                     success:function (result) {
-                        if(result) {
+                        if(result == 1) {
                             layer.msg("添加用户成功",{icon:1});
                             //停留1s后刷新用户列表
                             setTimeout(function () {
                                 location.reload();
                             },1000);
-                        }else {
-                            layer.alert("添加用户失败");
+                        }else if(result == 0){
+                            layer.msg("添加用户失败");
+                        }else{
+                            layer.msg("Token验证失败，新增操作失败");
                         }
                     }
                 })

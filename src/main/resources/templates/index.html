@@ -67,7 +67,7 @@
 							<i class="icon-table"></i>用户管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="table.html">查询用户</a>
+							<a id="queryUsers">查询用户</a>
 						</dd>
 					</dl>
 				</li>
@@ -266,5 +266,9 @@
 <script type="text/javascript">
 	console.log(sessionStorage.getItem("username"));
 	document.getElementById("username").innerHTML = sessionStorage.getItem("username");
+
+	$("#queryUsers").click(function () {
+		window.location = "users.html"
+	})
 </script>
 </html>
