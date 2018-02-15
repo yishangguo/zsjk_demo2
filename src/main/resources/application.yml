@@ -1,6 +1,6 @@
 spring:
   datasource:
-     url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false
+     url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&zeroDateTimeBehavior=convertToNull&&characterEncoding=utf8
      username: root
      password: pppp
      driver-class-name: com.mysql.jdbc.Driver
@@ -23,6 +23,6 @@ spring:
       min-idle: 3
 #    连接池中的最大等待时间1s
       max-wait: 1000
-#    连接超时时间1s（毫秒；0意思是没有超时时间）
+#    连接超时时间1s（毫秒；0表示没有超时时间）
       timeout: 1000
 

@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 public class Goods {
     private int gid;
+    private int uid;
     private String name;
     private int num;
     private String price;
@@ -13,10 +14,23 @@ public class Goods {
     public Goods() {
     }
 
+    public Goods(int gid, int uid, String name, int num, String price, String description, String image, String created, String updated) {
+        this.gid = gid;
+        this.uid = uid;
+        this.name = name;
+        this.num = num;
+        this.price = price;
+        this.description = description;
+        this.image = image;
+        this.created = created;
+        this.updated = updated;
+    }
+
     @Override
     public String toString() {
         return "Goods{" +
                 "gid=" + gid +
+                ", uid=" + uid +
                 ", name='" + name + '\'' +
                 ", num=" + num +
                 ", price='" + price + '\'' +
@@ -27,23 +41,20 @@ public class Goods {
                 '}';
     }
 
-    public Goods(int gid, String name, int num, String price, String description, String image, String created, String updated) {
-        this.gid = gid;
-        this.name = name;
-        this.num = num;
-        this.price = price;
-        this.description = description;
-        this.image = image;
-        this.created = created;
-        this.updated = updated;
-    }
-
     public int getGid() {
         return gid;
     }
 
     public void setGid(int gid) {
         this.gid = gid;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public String getName() {

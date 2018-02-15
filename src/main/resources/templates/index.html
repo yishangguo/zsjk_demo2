@@ -44,10 +44,10 @@
 							<i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="flex-layout.html">新增商品</a>
+							<a id="addGoods">新增商品</a>
 						</dd>
 						<dd>
-							<a href="flow-layout.html">查询库存</a>
+							<a id="queryGoods">查询商品</a>
 						</dd>
 					</dl>
 				</li>
@@ -269,6 +269,16 @@
 
 	$("#queryUsers").click(function () {
 		window.location = "users.html"
+	});
+
+	$("#addGoods").click(function () {
+		window.location = "addGoods.html";
+	});
+
+	$("#queryGoods").click(function () {
+		window.location = "queryGoods.html"
 	})
+
+
 </script>
 </html>

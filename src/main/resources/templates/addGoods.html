@@ -44,7 +44,7 @@
                             <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="flex-layout.html">新增商品</a>
+                            <a href="queryGoods.html">新增商品</a>
                         </dd>
                         <dd>
                             <a href="flow-layout.html">查询库存</a>
@@ -302,68 +302,6 @@
                         </select>-->
                     </div>
                 </div>
-<!--                <div class="form-group-col-2">
-                    <div class="form-label">兴趣爱好：</div>
-                    <div class="form-cont">
-                        <label class="check-box">
-                            <input type="checkbox" checked="checked" name="mmm"/>
-                            <span>读书</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>听音乐</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>羽毛球</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>篮球</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>足球</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" checked="checked" name="mmm"/>
-                            <span>读书</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>听音乐</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>羽毛球</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>篮球</span>
-                        </label>
-                        <label class="check-box">
-                            <input type="checkbox" name="mmm"/>
-                            <span>足球</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group-col-2">
-                    <div class="form-label">性别：</div>
-                    <div class="form-cont">
-                        <label class="radio">
-                            <input type="radio" name="sex"/>
-                            <span>男士</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="sex"  checked="checked"/>
-                            <span>女士</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="sex"/>
-                            <span>保密</span>
-                        </label>
-                    </div>
-                </div>-->
                 <div class="form-group-col-2">
                     <div class="form-label">商品描述：</div>
                     <div class="form-cont">
@@ -439,10 +377,10 @@ $("#upload").click(function () {
     });
 })
 
-
     //新增商品
     $("#submit").click(function () {
         var info = {};
+        info.uid = sessionStorage.getItem("uid");
         info.name = $("#name").val();
         info.num = $("#num").val();
         info.price = $("#price").val();
@@ -457,7 +395,10 @@ $("#upload").click(function () {
             data:JSON.stringify(info),
             success:function (data) {
                 if(data){
-                    layer.alert("新增商品成功");
+                    layer.msg("新增商品成功");
+                    setTimeout(function () {
+                        window.location.reload();
+                    },1000);
                 }else{
                     layer.alert("新增商品失败");
                 }

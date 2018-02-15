@@ -18,53 +18,56 @@
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="5" parent="2" name="name">
-        <data-type>varchar(30)</data-type>
-      </column>
-      <column id="6" parent="2" name="price">
-        <data-type>decimal(10)</data-type>
-      </column>
-      <column id="7" parent="2" name="num">
+      <column id="5" parent="2" name="uid">
         <data-type>int(11)</data-type>
       </column>
-      <column id="8" parent="2" name="created">
+      <column id="6" parent="2" name="name">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="7" parent="2" name="price">
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="8" parent="2" name="num">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="2" name="created">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
       </column>
-      <column id="9" parent="2" name="updated">
+      <column id="10" parent="2" name="updated">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="10" parent="2" name="image">
+      <column id="11" parent="2" name="image">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="11" parent="2" name="description">
+      <column id="12" parent="2" name="description">
         <data-type>text</data-type>
       </column>
-      <key id="12" parent="2" name="PRIMARY">
+      <key id="13" parent="2" name="PRIMARY">
         <columns>gid</columns>
         <primary>1</primary>
       </key>
-      <column id="13" parent="3" name="id">
+      <column id="14" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="14" parent="3" name="username">
+      <column id="15" parent="3" name="username">
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="15" parent="3" name="password">
+      <column id="16" parent="3" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="16" parent="3" name="phone">
+      <column id="17" parent="3" name="phone">
         <data-type>varchar(11)</data-type>
       </column>
-      <column id="17" parent="3" name="type">
+      <column id="18" parent="3" name="type">
         <data-type>tinyint(4)</data-type>
       </column>
-      <key id="18" parent="3" name="PRIMARY">
+      <key id="19" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>

@@ -44,7 +44,7 @@
                             <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="flex-layout.html">新增商品</a>
+                            <a href="queryGoods.html">新增商品</a>
                         </dd>
                         <dd>
                             <a href="flow-layout.html">查询库存</a>
@@ -449,36 +449,29 @@
                         tdPhone.className = "phone";
                         var tdType = document.createElement("td");
                         tdType.innerHTML = userType[datas[i].type];
-                    tdType.className = "type";
+                        tdType.className = "type";
                         var td = document.createElement("td");
-
                         var edit = document.createElement("a");
                         var del = document.createElement("a");
-//                        add.className = "add";
-//                        add.title = "新增";
-//                        add.innerHTML = "新增 ";
                         edit.className = "edit";
                         edit.title = "编辑";
                         edit.innerHTML = "编辑 ";
                         del.className = "del";
                         del.title = "删除";
                         del.innerHTML = "删除 ";
-//                        td.appendChild(add);
                         td.appendChild(edit);
                         td.appendChild(del);
-
                         tr.appendChild(tdNum);
                         tr.appendChild(tdUsername);
                         tr.appendChild(tdPhone);
                         tr.appendChild(tdType);
                         tr.appendChild(td);
-
                         tr.appendChild(tdId);
+
                         document.getElementsByTagName("tbody")[0].appendChild(tr);
                     }
                 //绑定删除事件
                 $(".del").on("click",function () {
-                    //var username = $(this).parents("tr").find(".username").text();
                     var info = {};
                     info.id = $(this).parents("tr").find(".id").text();
                     info.token = sessionStorage.getItem("token");

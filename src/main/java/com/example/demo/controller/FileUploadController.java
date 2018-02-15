@@ -45,7 +45,10 @@ public class FileUploadController {
 
 //        String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
 //        System.out.println("filePath-->"+filePath);
-        String filePath = "E:\\ZSJK\\demo2\\src\\main\\resources\\static\\upload\\";
+//        String filePath = "E:\\ZSJK\\demo2\\src\\main\\resources\\static\\upload\\";
+
+        //文件存储在工程resources/static/upload路径下
+        String filePath = ".\\src\\main\\resources\\static\\upload\\";
         try {
             uploadFile(file.getBytes(), filePath, fileName);
         } catch (Exception e) {
