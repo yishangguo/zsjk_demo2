@@ -19,15 +19,19 @@
         <sequence-identity>1</sequence-identity>
       </column>
       <column id="5" parent="2" name="uid">
+        <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
       <column id="6" parent="2" name="name">
+        <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
       <column id="7" parent="2" name="price">
+        <mandatory>1</mandatory>
         <data-type>decimal(10)</data-type>
       </column>
       <column id="8" parent="2" name="num">
+        <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
       <column id="9" parent="2" name="created">
@@ -56,15 +60,18 @@
         <sequence-identity>1</sequence-identity>
       </column>
       <column id="15" parent="3" name="username">
+        <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
       <column id="16" parent="3" name="password">
+        <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
       <column id="17" parent="3" name="phone">
         <data-type>varchar(11)</data-type>
       </column>
       <column id="18" parent="3" name="type">
+        <mandatory>1</mandatory>
         <data-type>tinyint(4)</data-type>
       </column>
       <key id="19" parent="3" name="PRIMARY">

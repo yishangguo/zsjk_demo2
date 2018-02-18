@@ -10,11 +10,13 @@ public class Goods {
     private String image;
     private String created;
     private String updated;
+    private String token;
+    private String encoderUid;
 
     public Goods() {
     }
 
-    public Goods(int gid, int uid, String name, int num, String price, String description, String image, String created, String updated) {
+    public Goods(int gid, int uid, String name, int num, String price, String description, String image, String created, String updated, String token, String encoderUid) {
         this.gid = gid;
         this.uid = uid;
         this.name = name;
@@ -24,6 +26,8 @@ public class Goods {
         this.image = image;
         this.created = created;
         this.updated = updated;
+        this.token = token;
+        this.encoderUid = encoderUid;
     }
 
     @Override
@@ -38,6 +42,8 @@ public class Goods {
                 ", image='" + image + '\'' +
                 ", created='" + created + '\'' +
                 ", updated='" + updated + '\'' +
+                ", token='" + token + '\'' +
+                ", encoderUid='" + encoderUid + '\'' +
                 '}';
     }
 
@@ -111,5 +117,21 @@ public class Goods {
 
     public void setUpdated(String updated) {
         this.updated = updated;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getEncoderUid() {
+        return encoderUid;
+    }
+
+    public void setEncoderUid(String encoderUid) {
+        this.encoderUid = encoderUid;
     }
 }

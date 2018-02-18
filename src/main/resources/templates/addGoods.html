@@ -44,10 +44,10 @@
                             <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="queryGoods.html">新增商品</a>
+                            <a href="addGoods.html">新增商品</a>
                         </dd>
                         <dd>
-                            <a href="flow-layout.html">查询库存</a>
+                            <a href="queryGoods.html">查询库存</a>
                         </dd>
                     </dl>
                 </li>
@@ -67,7 +67,7 @@
                             <i class="icon-table"></i>用户管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="table.html">查询用户</a>
+                            <a href="users.html">查询用户</a>
                         </dd>
                     </dl>
                 </li>
@@ -231,7 +231,7 @@
                         <a><i class="icon-random"></i>清除缓存</a>
                     </li>
                     <li>
-                        <a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+                        <a><i class="icon-user"></i>用户:<em id="username"></em></a>
                     </li>
                     <li>
                         <a><i class="icon-bell-alt"></i>系统消息</a>
@@ -341,14 +341,7 @@
 </div>
 </body>
 <script type="text/javascript">
-//    //上传图片
-//    $("#upload").click(function () {
-//        if ($.browser.msie){
-//            window.uploadForm.submit();
-//        }else {
-//            $("#uploadForm").submit();
-//        }
-//    });
+    document.getElementById("username").innerHTML = sessionStorage.getItem("username");
 
 $("#upload").click(function () {
 //    var formData = new FormData();
@@ -380,12 +373,13 @@ $("#upload").click(function () {
     //新增商品
     $("#submit").click(function () {
         var info = {};
-        info.uid = sessionStorage.getItem("uid");
+        info.encoderUid = sessionStorage.getItem("uid");
         info.name = $("#name").val();
         info.num = $("#num").val();
         info.price = $("#price").val();
         info.image = $("#image").val();
         info.description = $("#description").val();
+        info.token = sessionStorage.getItem("token");
         console.log(info);
         $.ajax({
             type:"POST",
@@ -394,13 +388,15 @@ $("#upload").click(function () {
             headers:{"Content-Type":"application/json;charset=utf-8"},
             data:JSON.stringify(info),
             success:function (data) {
-                if(data){
-                    layer.msg("新增商品成功");
+                if(data == 1){
+                    layer.msg("新增商品成功",{icon:1});
                     setTimeout(function () {
                         window.location.reload();
-                    },1000);
-                }else{
+                    },600);
+                }else if(data == 0){
                     layer.alert("新增商品失败");
+                }else {
+                    layer.alert("Token验证失败");
                 }
             }
         })

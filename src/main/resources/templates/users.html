@@ -44,10 +44,10 @@
                             <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="queryGoods.html">新增商品</a>
+                            <a href="addGoods.html">新增商品</a>
                         </dd>
                         <dd>
-                            <a href="flow-layout.html">查询库存</a>
+                            <a href="queryGoods.html">查询库存</a>
                         </dd>
                     </dl>
                 </li>
@@ -67,7 +67,7 @@
                             <i class="icon-table"></i>用户管理<i class="icon-angle-right"></i>
                         </dt>
                         <dd>
-                            <a href="table.html">查询用户</a>
+                            <a href="users.html">查询用户</a>
                         </dd>
                     </dl>
                 </li>
@@ -414,6 +414,7 @@
     userType[1] = "卖家";
     var info = {};
     info.token = sessionStorage.getItem("token");
+    info.type = sessionStorage.getItem("type");
         //用户查询 为删除按钮、编辑按钮等绑定事件
         $.ajax({
             type:"POST",
@@ -422,7 +423,7 @@
             headers:{"Content-Type":"application/json;charset=utf-8"},
             data:JSON.stringify(info),
             success:function (datas) {
-                console.log(datas.length);
+                console.log(datas);
                 if (datas == null){
                     layer.msg("Token验证失败导致查询失败");
                 }
@@ -433,7 +434,7 @@
                         tr.className = "cen";
                         //用户ID
                         var tdId = document.createElement("td");
-                        tdId.innerHTML = datas[i].id;
+                        tdId.innerHTML = datas[i].encoderUid;
                         tdId.className = "id";
                         tdId.style="display:none";
 
@@ -473,7 +474,7 @@
                 //绑定删除事件
                 $(".del").on("click",function () {
                     var info = {};
-                    info.id = $(this).parents("tr").find(".id").text();
+                    info.encoderUid = $(this).parents("tr").find(".id").text();
                     info.token = sessionStorage.getItem("token");
                     layer.confirm("确定删除该用户？",{
                         btn:["是的","取消"]//按钮
@@ -523,7 +524,7 @@
                             document.getElementById("user_type").value = type;
                         },
                         yes:function () {
-                            info.id = $("#user_id").val();
+                            info.encoderUid = $("#user_id").val();
                             info.username = $("#user_name").val();
                             info.password = $("#pass_word").val();
                             info.phone = $("#user_phone").val();
@@ -544,7 +545,7 @@
                                         find.cells[2].innerText = $("#user_phone").val();
                                         find.cells[3].innerText = $("#user_type").val();
                                         setTimeout(function () {
-                                            layer.msg("编辑成功");
+                                            layer.msg("编辑成功",{icon:1});
                                         },1000);
                                     }else if(data == 0){
                                         layer.alert("编辑失败",function () {

@@ -44,10 +44,10 @@
 							<i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="queryGoods.html">新增商品</a>
+							<a href="addGoods.html">新增商品</a>
 						</dd>
 						<dd>
-							<a href="flow-layout.html">查询库存</a>
+							<a href="queryGoods.html">查询库存</a>
 						</dd>
 					</dl>
 				</li>
@@ -350,9 +350,10 @@
 	$("#queryUsers").click(function () {
 		window.location = "users.html"
 	});
-
 	var info = {};
 	info.token = sessionStorage.getItem("token");
+	info.type = sessionStorage.getItem("type");
+	info.encoderUid = sessionStorage.getItem("uid");
 	$.ajax({
 		type:"POST",
 		url:"query_goods",
@@ -404,7 +405,7 @@
 				bdNum.innerHTML = "库存：" + data[i].num;
 
 				var bdUid = document.createElement("p");
-				bdUid.innerHTML = "创建者ID：" + data[i].uid;
+				bdUid.innerHTML = "创建者：" + data[i].encoderUid;
 
 				bdImg.appendChild(imageObj);
 				panel.appendChild(hd);
@@ -476,7 +477,6 @@
 							info.image = $("#image").val();
 							info.description = $("#description").val();
 							info.token = sessionStorage.getItem("token");
-							//用户类型不进行修改
 							console.log(info);
 							$.ajax({
 								type:"POST",
@@ -487,13 +487,11 @@
 								success:function (data) {
 									if (data == 1){
 										//更新操作成功的话 把当前列的内容替换成更新后的
-										$(".name").innerText = $("#goods_name").val();
-										$(".price").innerText = $("#goods_price").val();
-										$(".num").innerText = $("#goods_num").val();
-										window.location.reload();
-										setTimeout(function () {
-											layer.msg("编辑成功");
-										},1000);
+//										parent.$(".name").text($("#goods_name").val());
+//										parent.$(".price").text = $("#goods_price").val();
+//										parent.$(".num").text = $("#goods_num").val();
+										location.reload();
+										layer.msg("成功编辑商品信息",{icon:1});
 									}else if(data == 0){
 										layer.alert("编辑失败",function () {
 											window.location.reload();
@@ -507,7 +505,7 @@
 						}
 					})
 				});
-			//panel-bd部分对应商品信息
+			//点击panel-bd部分删除相应商品信息
 			$(".panel-bd").on("click",function () {
 				//双击事件的执行代码
 				var info = {};
@@ -538,7 +536,7 @@
 						}
 					})
 				})
-			})
+			});
 		}
 
 	});

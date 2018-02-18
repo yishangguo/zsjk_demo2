@@ -7,8 +7,19 @@ public class User {
     private String phone;
     private int type;
     private String token;
+    private String encoderUid;
 
     public User() {
+    }
+
+    public User(Integer id, String username, String password, String phone, int type, String token, String encoderUid) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+        this.type = type;
+        this.token = token;
+        this.encoderUid = encoderUid;
     }
 
     @Override
@@ -20,16 +31,8 @@ public class User {
                 ", phone='" + phone + '\'' +
                 ", type=" + type +
                 ", token='" + token + '\'' +
+                ", encoderUid='" + encoderUid + '\'' +
                 '}';
-    }
-
-    public User(Integer id, String username, String password, String phone, int type, String token) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
-        this.type = type;
-        this.token = token;
     }
 
     public Integer getId() {
@@ -78,5 +81,13 @@ public class User {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getEncoderUid() {
+        return encoderUid;
+    }
+
+    public void setEncoderUid(String encoderUid) {
+        this.encoderUid = encoderUid;
     }
 }

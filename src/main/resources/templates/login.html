@@ -88,7 +88,8 @@ $("#entry").click(function () {
         success:function (data) {
             if (data){
                 sessionStorage.setItem("username",data.username);
-                sessionStorage.setItem("uid",data.id);
+                sessionStorage.setItem("uid",data.encoderUid);
+                sessionStorage.setItem("type",data.type);
                 sessionStorage.setItem("token",data.token);
                 if(data.type == 0){
                     window.location = "index.html"

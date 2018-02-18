@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @Controller
@@ -35,22 +36,32 @@ public class UserController {
    //用户查询
     @RequestMapping("/query_users")
     @ResponseBody
-    public List<User> queryUsers(@RequestBody User user){
+    public List<User> queryUsers(@RequestBody User user) throws UnsupportedEncodingException {
         if (Utils.parserToken(user.getToken()) == null) {
             return null;
         }
-        return userMapper.queryUser();
+        if (user.getType() == 0){
+            List<User> users = userMapper.queryUser();
+            //遍历查询到的用户集合 对用户ID编码
+            for (int i=0;i<users.size();i++){
+                String encoderUid = Utils.Base64Encoder(users.get(i).getId().toString());
+                users.get(i).setEncoderUid(encoderUid);
+                users.get(i).setId(null);
+            }
+            return users;
+        }else return null;
     }
 
     //删除用户
     @RequestMapping("/del_user")
     @ResponseBody
-    public int delUser(@RequestBody User user){
+    public int delUser(@RequestBody User user) throws UnsupportedEncodingException {
         System.out.println(user);
         if (Utils.parserToken(user.getToken()) == null){
             return -1;
         }
-        if (userMapper.delUser(user.getId())==1){
+        int uid = Integer.valueOf(Utils.Base64Decoder(user.getEncoderUid()));
+        if (userMapper.delUser(uid)==1){
             return 1;
         }else return 0;
     }
@@ -58,9 +69,10 @@ public class UserController {
     //更新用户
     @RequestMapping("/edit_user")
     @ResponseBody
-    public int updateUser(@RequestBody User user){
+    public int updateUser(@RequestBody User user) throws UnsupportedEncodingException {
         String password = Utils.encodeMd5(user.getPassword());
         System.out.println(user);
+        user.setId(Integer.valueOf(Utils.Base64Decoder(user.getEncoderUid())));
         System.out.println("result:"+userMapper.updateUser(user.getUsername(),password,user.getPhone(),user.getType(),user.getId()));
         if (Utils.parserToken(user.getToken()) == null){
             return -1;

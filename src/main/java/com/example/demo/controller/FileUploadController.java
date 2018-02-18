@@ -30,7 +30,6 @@ import java.nio.file.Paths;
 @MultipartConfig
 @Controller
 public class FileUploadController {
-
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     @ResponseBody
     public boolean upload(@RequestParam("file") MultipartFile file) throws IOException, ServletException {
@@ -42,7 +41,6 @@ public class FileUploadController {
         //获取文件后缀名
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
         System.out.println("上传的后缀名为："+suffixName);
-
 //        String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
 //        System.out.println("filePath-->"+filePath);
 //        String filePath = "E:\\ZSJK\\demo2\\src\\main\\resources\\static\\upload\\";

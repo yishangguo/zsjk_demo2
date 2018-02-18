@@ -1,9 +1,11 @@
 package com.example.demo.util;
 
+import java.io.UnsupportedEncodingException;
 import java.security.Key;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
@@ -21,6 +23,7 @@ import javax.xml.bind.DatatypeConverter;
 
 
 public class Utils {
+
 
     //日期格式
     public static String getDate(java.util.Date date){
@@ -68,6 +71,18 @@ public class Utils {
             log.error("json web token verify failed");
             return null;
         }
+    }
+
+    //Base64编码
+    public static String Base64Encoder(String input) throws UnsupportedEncodingException {
+        byte[] inputByte = input.getBytes("UTF-8");
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(inputByte);
+    }
+    //Base64解码
+    public static String Base64Decoder(String encoderString) throws UnsupportedEncodingException {
+        Base64.Decoder decoder = Base64.getDecoder();
+        return new String(decoder.decode(encoderString),"UTF-8");
     }
 
 }

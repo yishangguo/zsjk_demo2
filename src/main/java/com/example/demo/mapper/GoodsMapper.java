@@ -31,6 +31,12 @@ public interface GoodsMapper {
     List<Goods> queryGoods();
 
     /**
+     * 商家查询自己的商品信息
+     * */
+    @Select("select * from goods where uid = #{uid}")
+    List<Goods> queryGoodsSeller(@Param("uid") int uid);
+
+    /**
      * 更新商品信息
      * */
     @Update("update goods set name=#{name},price=#{price},num=#{num},updated=#{updated},image=#{image} where gid=#{gid}")
