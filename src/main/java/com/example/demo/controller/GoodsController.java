@@ -119,4 +119,9 @@ public class GoodsController {
     public String queryGoodsHTML(){
         return "queryGoods";
     }
+
+    @RequestMapping("/queryGoods_custom")
+    public String queryGoodsHTMLCustom(){
+        return "queryGoods_custom";
+    }
 }

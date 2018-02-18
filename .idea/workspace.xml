@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbacba70-8720-44a7-8aaa-c5f0ac69f0a3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/addGoods_custom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/queryGoods_custom.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/FileUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/FileUploadController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/entity/Goods.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/entity/Goods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/mapper/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/mapper/GoodsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/addGoods.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/addGoods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index_custom.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_custom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/queryGoods.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/queryGoods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,12 +71,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
+            <state relative-caret-position="199">
+              <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+              <folding>
+                <element signature="e#4170#4171#0" expanded="true" />
+                <element signature="e#4205#4206#0" expanded="true" />
+                <element signature="e#4290#4291#0" expanded="true" />
+                <element signature="e#4332#4333#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queryGoods_custom.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/queryGoods_custom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#2389#9775#0" expanded="false" />
+                <element signature="n#div#0;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#17924#22169#0" expanded="false" />
+                <element signature="e#18631#20349#0" expanded="false" />
+                <element signature="e#19196#20325#0" expanded="false" />
+                <element signature="e#19372#20297#0" expanded="false" />
+                <element signature="e#22257#23529#0" expanded="false" />
+                <element signature="e#22517#22576#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,21 +138,43 @@
       <file leaf-file-name="queryGoods.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/queryGoods.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="355" column="28" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
+            <state relative-caret-position="240">
+              <caret line="50" column="29" selection-start-line="45" selection-start-column="24" selection-end-line="50" selection-end-column="29" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#2020#9406#0" expanded="false" />
-                <element signature="n#div#0;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#0;n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#15838#18557#0" expanded="false" />
-                <element signature="e#16373#17394#0" expanded="false" />
-                <element signature="e#16802#17384#0" expanded="false" />
-                <element signature="e#16918#17373#0" expanded="false" />
-                <element signature="e#18627#19368#0" expanded="false" />
-                <element signature="e#18815#18847#0" expanded="false" />
+                <element signature="e#2034#9420#0" expanded="false" />
+                <element signature="e#15243#17962#0" expanded="false" />
+                <element signature="e#15778#16799#0" expanded="false" />
+                <element signature="e#16207#16789#0" expanded="false" />
+                <element signature="e#16323#16778#0" expanded="false" />
+                <element signature="e#18032#18773#0" expanded="false" />
+                <element signature="e#18220#18252#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addGoods_custom.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addGoods_custom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="745">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+              <folding>
+                <element signature="e#8026#8062#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addGoods.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addGoods.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="374" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
+              <folding>
+                <element signature="e#2736#10122#0" expanded="false" />
+                <element signature="e#15668#15704#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -155,31 +207,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoApplicationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/DemoApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index_custom.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_custom.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="50" column="29" selection-start-line="45" selection-start-column="24" selection-end-line="50" selection-end-column="29" />
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -231,7 +263,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/RedisController.java" />
         <option value="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.10/commons-codec-1.10.jar!/org/apache/commons/codec/binary/Hex.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/Token.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/ServletListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -243,7 +274,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/util/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index_custom.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/entity/Goods.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
@@ -252,9 +282,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/FileUploadController.java" />
         <option value="dbtable:/88316eab/212a16ba-eadf-4145-b77b-9264d72b5f1a/demo.goods" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/queryGoods.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mapper/GoodsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/queryGoods.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addGoods_custom.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index_custom.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/queryGoods_custom.html" />
       </list>
     </option>
   </component>
@@ -1169,7 +1203,7 @@
       <workItem from="1518658370555" duration="2007000" />
       <workItem from="1518831036245" duration="27300000" />
       <workItem from="1518917313670" duration="2882000" />
-      <workItem from="1518958615689" duration="2049000" />
+      <workItem from="1518958615689" duration="3169000" />
     </task>
     <task id="LOCAL-00001">
       <created>1517587275170</created>
@@ -1220,7 +1254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518658669663</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="新增、查询模块完成">
+      <created>1518960732223</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1518960732224</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1256,7 +1297,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258477000" />
+    <option name="totallyTimeSpent" value="259597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1277,10 +1318,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17322835" sideWeight="0.1522694" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28503937" sideWeight="0.1522694" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1482602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17322835" sideWeight="0.8477306" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28503937" sideWeight="0.8477306" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52138156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1327,7 +1368,8 @@
     <MESSAGE value="用户管理模块 增删改查" />
     <MESSAGE value="增加token" />
     <MESSAGE value="商品管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品管理" />
+    <MESSAGE value="新增、查询模块完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增、查询模块完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,30 +1382,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/88316eab/212a16ba-eadf-4145-b77b-9264d72b5f1a/demo.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/88316eab/212a16ba-eadf-4145-b77b-9264d72b5f1a/demo.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/88316eab/212a16ba-eadf-4145-b77b-9264d72b5f1a/demo.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1558,13 +1576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -1586,21 +1597,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addGoods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7953">
-          <caret line="381" column="52" selection-start-line="381" selection-start-column="52" selection-end-line="381" selection-end-column="52" />
-          <folding>
-            <element signature="e#2736#10122#0" expanded="false" />
-            <element signature="e#15668#15704#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/FileUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1429#1524#0" expanded="false" />
+            <element signature="e#2049#2095#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1658,6 +1663,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#818#819#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1737,35 +1747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_custom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/queryGoods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="355" column="28" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#2020#9406#0" expanded="false" />
-            <element signature="n#div#0;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#15838#18557#0" expanded="false" />
-            <element signature="e#16373#17394#0" expanded="false" />
-            <element signature="e#16802#17384#0" expanded="false" />
-            <element signature="e#16918#17373#0" expanded="false" />
-            <element signature="e#18627#19368#0" expanded="false" />
-            <element signature="e#18815#18847#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/users.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1802,11 +1783,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addGoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="374" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
+          <folding>
+            <element signature="e#2736#10122#0" expanded="false" />
+            <element signature="e#15668#15704#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/queryGoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="50" column="29" selection-start-line="45" selection-start-column="24" selection-end-line="50" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2034#9420#0" expanded="false" />
+            <element signature="e#15243#17962#0" expanded="false" />
+            <element signature="e#15778#16799#0" expanded="false" />
+            <element signature="e#16207#16789#0" expanded="false" />
+            <element signature="e#16323#16778#0" expanded="false" />
+            <element signature="e#18032#18773#0" expanded="false" />
+            <element signature="e#18220#18252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addGoods_custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding>
+            <element signature="e#8026#8062#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index_custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="199">
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+          <folding>
+            <element signature="e#4170#4171#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
+            <element signature="e#4290#4291#0" expanded="true" />
+            <element signature="e#4332#4333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/queryGoods_custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2389#9775#0" expanded="false" />
+            <element signature="n#div#0;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#header#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#17924#22169#0" expanded="false" />
+            <element signature="e#18631#20349#0" expanded="false" />
+            <element signature="e#19196#20325#0" expanded="false" />
+            <element signature="e#19372#20297#0" expanded="false" />
+            <element signature="e#22257#23529#0" expanded="false" />
+            <element signature="e#22517#22576#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

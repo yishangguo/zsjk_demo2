@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>商城后台管理</title>
+    <meta name="keywords"  content="设置关键词..." />
+    <meta name="description" content="设置描述..." />
+    <meta name="author" content="DeathGhost" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link rel="icon" href="images/icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/plug-ins/customScrollbar.min.js"></script>
+    <script src="javascript/plug-ins/echarts.min.js"></script>
+    <script src="javascript/plug-ins/layerUi/layer.js"></script>
+    <script src="editor/ueditor.config.js"></script>
+    <script src="editor/ueditor.all.js"></script>
+    <script src="javascript/plug-ins/pagination.js"></script>
+    <script src="javascript/public.js"></script>
+</head>
+<body>
+<div class="main-wrap">
+    <div class="side-nav">
+        <div class="side-logo">
+            <div class="logo">
+				<span class="logo-ico">
+					<i class="i-l-1"></i>
+					<i class="i-l-2"></i>
+					<i class="i-l-3"></i>
+				</span>
+                <strong>商城后台管理</strong>
+            </div>
+        </div>
+
+        <nav class="side-menu content mCustomScrollbar" data-mcs-theme="minimal-dark">
+            <h2>
+                <a href="index.html" class="InitialPage"><i class="icon-dashboard"></i>首页</a>
+            </h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-columns"></i>商品管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="addGoods_custom.html">新增商品</a>
+                        </dd>
+                        <dd>
+                            <a href="queryGoods_custom.html">查询库存</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-inbox"></i>订单管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="button.html">查询订单</a>
+                        </dd>
+                    </dl>
+                </li>
+                <!--				<li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-list-alt"></i>表单UI<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="form.html">表单结构样式</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-external-link"></i>弹出窗口<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="popups.html">基础弹出层</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-bar-chart"></i>百度统计echarts图表<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="echarts.html">echarts统计图表</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-font"></i>文本编辑器<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="ueditor.html">百度UEDITOR编辑器</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-road"></i>进度条<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="progress.html">progress进度条兼容</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-tags"></i>Tab选项卡<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="tab.html">Tab选项卡</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-filter"></i>下拉菜单<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="button-dropdown.html">按钮式下拉菜单</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-sitemap"></i>页面分组标题<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="title.html">页面标题</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-columns"></i>分页<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="paging.html">jquery分页效果</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-spinner"></i>旋转动画<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="animation.html">刷新加载动画</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-fighter-jet"></i>面包屑导航<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="breadcrumb.html">面包屑</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-laptop"></i>文本面板<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="text-panel.html">文本面板</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-leaf"></i>块引用<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="blockquote.html">块引用</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            <i class="icon-star"></i>第三方弹窗组件<i class="icon-angle-right"></i>
+                                        </dt>
+                                        <dd>
+                                            <a href="layer.html">web弹层组件</a>
+                                        </dd>
+                                    </dl>
+                                </li>-->
+            </ul>
+        </nav>
+
+
+        <footer class="side-footer">© DeathGhost 版权所有</footer>
+    </div>
+    <div class="content-wrap">
+        <header class="top-hd">
+            <div class="hd-lt">
+                <a class="icon-reorder"></a>
+            </div>
+            <div class="hd-rt">
+                <ul>
+                    <li>
+                        <a href="#" target="_blank"><i class="icon-home"></i>前台访问</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-random"></i>清除缓存</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-user"></i>当前用户:<em id="username"></em></a>
+                    </li>
+                    <li>
+                        <a><i class="icon-bell-alt"></i>系统消息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main-cont content mCustomScrollbar">
+            <div class="page-wrap">
+                <!--开始::内容-->
+                <section class="page-hd">
+                    <header>
+                        <h2 class="title">商品信息</h2>
+                        <p class="title-description">
+                            flex容器有单行多行和反转排列，具体查看CSS3相关文件，该模板仅提供页面常用
+                            布局结构，<em class="text-primary">单行平均布局</em>与<em class="text-primary">多行5列</em>布局。
+                            弹性盒子本无样式，具体内容间隔，亲们根据内容容器进行设置<em class="text-primary">外边距(margin)</em>或
+                            <em class="text-primary">内边距(padding)</em>设置。
+                        </p>
+                    </header>
+                </section>
+
+                <blockquote class="blockquote mb-10">
+                    CSS3弹性盒模型布局结构——<b>三列多行</b>样式
+                </blockquote>
+                <ul class="flex flex-wrap flex-col-5" id="listGoods">
+                    <!--<li class="box-child">-->
+                    <!--<div class="panel panel-secondary mr-10">-->
+                    <!--<div class="panel-hd">弹性盒子布局</div>-->
+                    <!--<div class="panel-bd">-->
+                    <!--<image src="..\upload\24f086fdb9efd62a48f0d0f887a02118.jpg" width="112" height="112" ></image>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="box-child">-->
+                    <!--<div class="panel panel-secondary mr-10">-->
+                    <!--<div class="panel-hd">弹性盒子布局</div>-->
+                    <!--<div class="panel-bd">-->
+                    <!--弹性盒子布局·三列多行样式-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                </ul>
+
+                <!--开始::结束-->
+            </div>
+        </main>
+        <footer class="btm-ft">
+            <p class="clear">
+                <span class="fl">©Copyright 2016 <a href="#" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
+				<span class="fr text-info">
+					<em class="uppercase">
+						<i class="icon-user"></i>
+						author:deathghost
+					</em> |
+					<em class="uppercase"><i class="icon-envelope-alt"></i>
+						更多模板： <a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+					</em>
+					<a onclick="reciprocate()" class="text-primary"><i class="icon-qrcode"></i>捐赠</a>
+				</span>
+            </p>
+        </footer>
+    </div>
+</div>
+
+</body>
+<script type="text/template" id="editGoods">
+    <div class="form-group-col-2">
+        <div class="form-label"></div>
+        <div class="form-cont">
+            <input type="text" placeholder="" class="form-control form-boxed" style="display: none;" id="goods_id"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">商品名称：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="goods_name"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">商品单价：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="goods_price"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">商品库存：</div>
+        <div class="form-cont">
+            <input type="text" class="form-control form-boxed" style="width: 60%" id="goods_num"/>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">商品描述：</div>
+        <div class="form-cont">
+            <textarea class="form-control form-boxed" id="description" style="width: 70%">摘要信息</textarea>
+        </div>
+    </div>
+    <div class="form-group-col-2">
+        <div class="form-label">修改图片：</div>
+        <div class="form-cont">
+            <form id="uploadForm">
+                <input type="file" name="file" class="form-control form-boxed" style="width:300px;" id="image"/>
+                <button class="btn btn-primary" type="button" id="editImage">上传</button>
+            </form>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    console.log(sessionStorage.getItem("username"));
+    document.getElementById("username").innerHTML = sessionStorage.getItem("username");
+
+    var info = {};
+    info.token = sessionStorage.getItem("token");
+    info.type = sessionStorage.getItem("type");
+    info.encoderUid = sessionStorage.getItem("uid");
+    $.ajax({
+        type:"POST",
+        url:"query_goods",
+        dataType:"json",
+        headers:{"Content-Type":"application/json;charset=utf-8"},
+        data:JSON.stringify(info),
+        success:function (data) {
+            console.log(data);
+            var i = 0;
+            for (i in data) {
+                var li = document.createElement("li");
+                li.className = "box-child";
+
+                var panel = document.createElement("div");
+                panel.className = "panel panel-secondary mr-10";
+
+                var hd = document.createElement("div");
+                hd.className = "panel-hd";
+                hd.innerHTML = "商品名称：" + data[i].name;
+
+                var bdImg = document.createElement("div");
+                bdImg.className = "panel-bd";
+                bdImg.style.position = "relative";
+                var imageObj = new Image();
+                imageObj.src = data[i].image;
+                imageObj.style.width = "120" + 'px';
+                imageObj.style.height = "120" + 'px';
+
+                var bdIndex = document.createElement("p");
+                bdIndex.className = "index";
+                bdIndex.innerHTML = parseInt(i) + parseInt(1);//生成序号
+                bdIndex.style.display = "none";
+
+                var bdId = document.createElement("p");
+                bdId.className = "gid";
+                bdId.innerHTML = data[i].gid;
+                bdId.style.display = "none";
+
+                var bdPrice = document.createElement("p");
+                bdPrice.className = "price";
+                bdPrice.innerHTML = "单价：" + data[i].price;
+
+                var bdDes = document.createElement("p");
+                bdDes.className = "description";
+                bdDes.innerHTML = data[i].description;
+
+                var bdNum = document.createElement("p");
+                bdNum.className = "num";
+                bdNum.innerHTML = "库存：" + data[i].num;
+
+                var bdUid = document.createElement("p");
+                bdUid.innerHTML = "创建者：" + data[i].encoderUid;
+
+                bdImg.appendChild(imageObj);
+                panel.appendChild(hd);
+                panel.appendChild(bdImg);
+                bdImg.appendChild(bdIndex);
+                bdImg.appendChild(bdId);
+                bdImg.appendChild(bdPrice);
+                bdImg.appendChild(bdDes);
+                bdImg.appendChild(bdNum);
+                bdImg.appendChild(bdUid);
+                li.appendChild(panel);
+                document.getElementById("listGoods").appendChild(li);
+            }
+            //点击panel-hd部分编辑相应商品信息
+            $(".panel-hd").on("click",function () {
+                var info = {};
+                var gid = $(this).parent().find(".gid").text();
+                var name = $(this).parent().find(".panel-hd").text();
+                var price = $(this).parent().find(".price").text();
+                var num = $(this).parent().find(".num").text();
+                var description = $(this).parent().find(".description").text();
+
+                console.log("description::"+description);
+                layer.open({
+                    type:1,//很重要
+                    title:"编辑商品信息",
+                    area:["750px","470px"],
+                    content:$("#editGoods").html(),
+                    btn:["修改并保存"],
+                    success:function () {
+                        //页面值赋给弹出层
+                        document.getElementById("goods_id").value = gid;
+                        document.getElementById("goods_name").value = name.split("：")[1];
+                        document.getElementById("goods_price").value = price.split("：")[1];
+                        document.getElementById("goods_num").value = num.split("：")[1];
+                        document.getElementById("description").value = description;
+
+                        //上传需要修改的图片（编辑功能）
+                        $("#editImage").click(function () {
+                            var formData = new FormData($("#uploadForm")[0]);
+                            console.log($("#uploadForm")[0])
+                            $.ajax({
+                                type:"post",
+                                url:"upload",
+                                data:formData,
+                                cache:false,
+                                async: false,
+                                processData : false,
+                                contentType : false,
+                                dataType:"text",
+                                success : function(data){
+                                    console.log(data);
+                                    if (data){
+                                        //上传成功
+                                        layer.alert("图片上传成功");
+                                    }else {
+                                        //图片上传失败，请重新上传
+                                        layer.alert("图片上传失败，请重新上传");
+                                    }
+                                }
+                            });
+                        });
+                    },
+                    yes:function () {
+                        info.gid = $("#goods_id").val();
+                        info.name = $("#goods_name").val();
+                        info.price = $("#goods_price").val();
+                        info.num = $("#goods_num").val();
+                        info.image = $("#image").val();
+                        info.description = $("#description").val();
+                        info.token = sessionStorage.getItem("token");
+                        console.log(info);
+                        $.ajax({
+                            type:"POST",
+                            url:"edit_goods",
+                            dataType:"json",
+                            headers:{"Content-Type":"application/json;charset=utf-8"},
+                            data:JSON.stringify(info),
+                            success:function (data) {
+                                if (data == 1){
+                                    //更新操作成功的话 把当前列的内容替换成更新后的
+//										parent.$(".name").text($("#goods_name").val());
+//										parent.$(".price").text = $("#goods_price").val();
+//										parent.$(".num").text = $("#goods_num").val();
+                                    location.reload();
+                                    layer.msg("成功编辑商品信息",{icon:1});
+                                }else if(data == 0){
+                                    layer.alert("编辑失败",function () {
+                                        window.location.reload();
+                                    })
+                                }else{
+                                    layer.alert("Token验证失败");
+                                }
+                                layer.closeAll();//关闭弹出层
+                            }
+                        })
+                    }
+                })
+            });
+            //点击panel-bd部分删除相应商品信息
+            $(".panel-bd").on("click",function () {
+                //双击事件的执行代码
+                var info = {};
+                var gid = $(this).parent().find(".gid").text();
+                info.token = sessionStorage.getItem("token");
+                info.gid = gid;
+                layer.confirm("确定删除该商品？",{
+                    btn:["是的","取消"]//按钮
+                },function () {
+                    $.ajax({
+                        type:"POST",
+                        url:"del_goods",
+                        dataType:"json",
+                        headers:{"Content-Type":"application/json;charset=utf-8"},
+                        data:JSON.stringify(info),
+                        success:function (data) {
+                            if (data == 1){
+                                layer.msg("删除成功",{icon:1});
+                                //停留1s后刷新商品列表
+                                setTimeout(function () {
+                                    location.reload();
+                                },1000);
+                            }else if(data == 0){
+                                layer.msg("删除失败");
+                            }else {
+                                layer.msg("Token验证失败");
+                            }
+                        }
+                    })
+                })
+            });
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -24,4 +24,11 @@ public class MainController {
     public String addGoods(){
         return "addGoods";
     }
+
+    //新增商品页面
+    @RequestMapping("/addGoods_custom")
+    public String addGoodsCustom(){
+        return "addGoods_custom";
+    }
+
 }
