@@ -87,4 +87,19 @@ public class UserController {
     public String Users(){
         return "users";
     }
+
+
+    @RequestMapping("/queryUserById")
+    @ResponseBody
+    public List<User> queryUserById(){
+        return userMapper.queryUserById("0");
+    }
+
+    @RequestMapping("/delUserById")
+    @ResponseBody
+    public int delUserById(){
+        return userMapper.delUserById("5");
+    }
+
+
 }

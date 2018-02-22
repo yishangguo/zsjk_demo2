@@ -25,4 +25,14 @@ spring:
       max-wait: 1000
 #    连接超时时间1s（毫秒；0表示没有超时时间）
       timeout: 1000
+logging:
+  config: classpath:log4j2.xml
+server:
+  port: 8081
+
+
+
+
+
+
 

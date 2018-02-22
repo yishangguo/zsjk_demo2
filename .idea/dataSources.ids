@@ -37,7 +37,7 @@
       <column id="9" parent="2" name="created">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
-        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
       <column id="10" parent="2" name="updated">
         <mandatory>1</mandatory>
