@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbacba70-8720-44a7-8aaa-c5f0ac69f0a3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d6c87f12-219e-4743-80af-3690c1f8fcc1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d6c87f12-219e-4743-80af-3690c1f8fcc1.xml" />
+    <list default="true" id="cbacba70-8720-44a7-8aaa-c5f0ac69f0a3" name="Default" comment="last">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo2.iml" afterPath="$PROJECT_DIR$/demo2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/TestServiceIml.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/TestServiceIml.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/provider.xml" afterPath="$PROJECT_DIR$/src/main/resources/provider.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -324,7 +317,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zsjk_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zsjk_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
@@ -332,10 +370,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dubbo-consumer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -344,7 +382,6 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -894,7 +931,7 @@
       <workItem from="1519176434445" duration="18612000" />
       <workItem from="1519260762088" duration="10916000" />
       <workItem from="1519296257131" duration="1425000" />
-      <workItem from="1519527328709" duration="817000" />
+      <workItem from="1519527328709" duration="1534000" />
     </task>
     <task id="LOCAL-00001">
       <created>1517587275170</created>
@@ -966,7 +1003,21 @@
       <option name="project" value="LOCAL" />
       <updated>1519262599936</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="last">
+      <created>1519528194261</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1519528194261</updated>
+    </task>
+    <task id="LOCAL-00012" summary="last">
+      <created>1519528635688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1519528635688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1002,7 +1053,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314562000" />
+    <option name="totallyTimeSpent" value="315279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1107,7 +1158,8 @@
     <MESSAGE value="商品管理" />
     <MESSAGE value="新增、查询模块完成" />
     <MESSAGE value="dubbo" />
-    <option name="LAST_COMMIT_MESSAGE" value="dubbo" />
+    <MESSAGE value="last" />
+    <option name="LAST_COMMIT_MESSAGE" value="last" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
